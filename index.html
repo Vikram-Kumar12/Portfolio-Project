@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -32,21 +33,27 @@
         <div id="about"></div>
         <!-- Project part  -->
         <div id="project"></div>
+        <!-- Contact part -->
+        <div id="contact"></div>
 
         <script>
-          function loadHTML(id, file) {
+          function loadHTML(id, file, callback) {
             fetch(file)
               .then((response) => response.text())
               .then((data) => {
                 document.getElementById(id).innerHTML = data;
+                if (callback) callback(); // Run callback after loading
               });
           }
           loadHTML("navbar", "navbar.html");
           loadHTML("hero", "hero.html");
           loadHTML("about", "about.html");
           loadHTML("project", "project.html");
+          loadHTML("contact", "contact.html");
         </script>
       </div>
+      
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
