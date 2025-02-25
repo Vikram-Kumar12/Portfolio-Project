@@ -1,33 +1,48 @@
 <div class="w-full">
-    <div class="flex items-center justify-between relative">
-
+    <nav class="flex items-center justify-between relative">
+        
         <h1 class="absolute sm:left-5 left-3 border-[3px] border-[#5435A1] px-5 py-7 text-3xl rounded-md mt-5 cursor-pointer hover:bg-[#5435A1]">
-        Vikram.
+        Vikram. <button id="toggleBtn" class=" text-white rounded ml-2"><i id="tog" class="ri-moon-line"></i></button>
         </h1>
 
         <!--  Mobile Menu Icon  -->
-        <span class="sm:hidden px-5 py-3 mt-5 rounded-md border cursor-pointer ml-[80%] text-white">
+        <button id="menu-btn" class=" sm:hidden px-5 py-3 mt-5 rounded-md border cursor-pointer ml-[80%] text-white">
           <i class="ri-menu-line text-white"></i>
-        </span>
+        </button>
+        <!-- Hidden Menu -->
+        <div id="menu" class="absolute top-20 left-1/2 transform -translate-x-1/2 w-[100%]  h-[70vh] bg-gray-800 rounded-lg shadow-lg py-10 flex flex-col items-center hidden">
+            <ul class="space-y-2 mt-10">
+                <li><a href="#home" class="block p-2 hover:bg-gray-700 rounded text-3xl">Home</a></li>
+                <li><a href="#about" class="block p-2 hover:bg-gray-700 rounded text-3xl">About</a></li>
+                <li><a href="#project" class="block p-2 hover:bg-gray-700 rounded text-3xl">Projects</a></li>
+                <li><a href="#skill" class="block p-2 hover:bg-gray-700 rounded text-3xl">Skills</a></li>
+                <li><a href="#contact" class="block p-2 hover:bg-gray-700 rounded text-3xl">Contact</a></li>
+            </ul>
+
+        </div>
 
         <!-- for desktop -->
         <div class="mt-5 hidden sm:block w-full ">
-            <div class="flex items-center justify-center gap-20 ml-[25%]">
-                <button class=" text-xl hover:scale-105 duration-200">
+            <div id="nav_links" class="flex items-center justify-center gap-[50px] ml-[30%]">
+                <!-- <button id="toggleBtn" class="px-1 text-white rounded "><i class="ri-toggle-line"></i></button> -->
+                <a href="#home" class=" text-xl hover:scale-105 duration-200">
                     Home
-                </button>
-                <button class="text-xl hover:scale-105 duration-200 ">
+                </a>
+                <a href="#about" class="text-xl hover:scale-105 duration-200 ">
                     About
-                </button>
-                <button class="text-xl hover:scale-105 duration-200 ">
+                </a>
+                <a href="#project" class="text-xl hover:scale-105 duration-200 ">
                     Project
-                </button>
-                <button class="text-xl hover:scale-105 duration-200 ">
+                </a>
+                <a href="#skill" class="text-xl hover:scale-105 duration-200 ">
+                    Skills
+                </a>
+                <a href="#contact" class="text-xl hover:scale-105 duration-200 ">
                     Contact
-                </button>
+                </a>
             </div>
         </div>
 
         
-    </div>
+    </nav>
 </div>
